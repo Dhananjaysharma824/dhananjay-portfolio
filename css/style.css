@@ -11,7 +11,7 @@
   /* Editorial Palette */
   --bg-canvas: #F4F2EC;
   --bg-surface: #ECE8DE;
-  --bg-surface-elevated: #FFFFFF;
+  --bg-surface-elevated: #ECE8DE;
   --bg-surface-tint: #E4DFD2;
   --bg-dark: #1C1E1A;
   --bg-dark-surface: #262923;
@@ -1522,7 +1522,7 @@ body::before {
 .skills-tab-btn:hover {
   color: var(--ink-primary);
   border-color: var(--border-medium);
-  background-color: var(--bg-surface-elevated);
+  background-color: var(--bg-surface-tint);
 }
 
 .skills-tab-btn.active {
@@ -1846,7 +1846,7 @@ body::before {
 .cert-editorial-item:hover {
   transform: translateX(4px);
   border-color: var(--border-medium);
-  background-color: var(--bg-surface-elevated);
+  background-color: var(--bg-surface-tint);
 }
 
 .cert-info {
@@ -1929,7 +1929,7 @@ body::before {
 }
 
 .contact-card {
-  background-color: var(--bg-surface-elevated);
+  background-color: var(--bg-surface);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-sm);
   padding: 1.5rem 1.75rem;
@@ -1978,10 +1978,10 @@ body::before {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-sm);
   color: var(--ink-primary);
-  background-color: var(--bg-surface);
+  background-color: var(--bg-canvas);
   transition: all var(--transition-fast);
   position: relative;
 }
@@ -2016,7 +2016,7 @@ body::before {
 
 /* Verified Social Profiles Box */
 .verified-profiles-box {
-  background-color: var(--bg-surface-elevated);
+  background-color: var(--bg-surface);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-sm);
   padding: 1.75rem;
@@ -2052,7 +2052,7 @@ body::before {
 
 .verified-profile-link:hover {
   border-color: var(--ink-primary);
-  background-color: var(--bg-surface-elevated);
+  background-color: var(--bg-surface-tint);
   transform: translateX(4px);
 }
 
@@ -2449,7 +2449,7 @@ body::before {
 .skills-search-input {
   width: 100%;
   padding: 0.75rem 1rem 0.75rem 2.25rem;
-  background-color: var(--bg-surface-elevated);
+  background-color: var(--bg-canvas);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-sm);
   font-family: var(--font-mono);
@@ -2488,7 +2488,7 @@ body::before {
    Interactive Contact Message Box
    ========================================================================== */
 .contact-form-card {
-  background-color: var(--bg-surface-elevated);
+  background-color: var(--bg-surface);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
   padding: clamp(1.75rem, 3.5vw, 2.5rem);
@@ -2570,7 +2570,7 @@ body::before {
 
 .form-control:focus {
   outline: none;
-  background-color: var(--bg-surface-elevated);
+  background-color: var(--bg-canvas);
   border-color: var(--accent-rust);
   box-shadow: 0 0 0 2px var(--accent-rust-subtle);
 }
@@ -2983,7 +2983,7 @@ body::before {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   padding: 0.35rem 0.7rem;
-  background-color: var(--bg-surface);
+  background-color: var(--bg-canvas);
   border: 1px dashed var(--border-medium);
   border-radius: var(--radius-sm);
   color: var(--ink-secondary);
@@ -3008,7 +3008,7 @@ body::before {
 }
 
 .tactile-sandbox-module {
-  background-color: var(--bg-surface-elevated);
+  background-color: var(--bg-surface);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
   padding: 1.25rem 1.4rem;
@@ -3057,7 +3057,7 @@ body::before {
   font-size: 0.65rem;
   font-weight: 600;
   padding: 0.22rem 0.55rem;
-  background-color: var(--bg-surface);
+  background-color: var(--bg-canvas);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-sm);
   color: var(--ink-secondary);
@@ -3225,6 +3225,7 @@ html.theme-transitioning *::after {
 [data-theme="dark"] .tactile-sandbox-module,
 [data-theme="dark"] .hero-portrait-card,
 [data-theme="dark"] .skills-category-card,
+[data-theme="dark"] .skill-category-card,
 [data-theme="dark"] .edu-column-card,
 [data-theme="dark"] .ledger-entry {
   background-color: var(--bg-surface);
