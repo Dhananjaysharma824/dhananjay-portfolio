@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Dhananjay Sharma — Full Stack Developer & MERN Specialist</title>
+  <meta name="description"
+    content="Personal portfolio of Dhananjay Sharma — B.Tech Information Technology graduate, Full Stack Web Developer proficient in React.js, Node.js, Express.js, and MongoDB. Also open to Frontend Development & Web Designing roles.">
+  <meta name="author" content="Dhananjay Sharma">
+  <meta name="theme-color" content="#F4F2EC">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Dhananjay Sharma — Full Stack Developer Portfolio">
+  <meta property="og:description"
+    content="Explore original projects, engineering skills, and professional experience of Dhananjay Sharma.">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Immediate Theme Initialization (Prevents Flash of Light/Dark Theme) -->
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('portfolio-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Custom Cursor Elements (Desktop only) -->
+  <div class="custom-cursor" aria-hidden="true"></div>
+  <div class="custom-cursor-follower" aria-hidden="true">
+    <span></span>
+  </div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="container-wide header-inner">
+      <a href="#hero" class="brand-identity" aria-label="Dhananjay Sharma Homepage">
+        <span class="brand-name">Dhananjay Sharma</span>
+        <span class="brand-role">/ Full Stack Dev</span>
+      </a>
+
+      <div class="header-meta">
+        <div class="header-status">
+          <span class="status-pulse" aria-hidden="true"></span>
+          <span>Agra, IN</span>
+        </div>
+        <span class="time-sep">|</span>
+        <div id="ist-time-display" class="font-mono">IST (UTC+5:30)</div>
+      </div>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about" class="nav-link" data-cursor="Read">About</a>
+        <a href="#projects" class="nav-link" data-cursor="View">Projects</a>
+        <a href="#skills" class="nav-link" data-cursor="Inspect">Skills</a>
+        <a href="#experience" class="nav-link" data-cursor="History">Experience</a>
+        <a href="#credentials" class="nav-link" data-cursor="Verify">Education</a>
+      </nav>
+
+      <div class="header-cta-group">
+        <!-- Visual Theme Mode Toggle Button -->
+        <button id="theme-toggle" class="btn-theme-toggle" type="button" aria-label="Toggle theme mode" title="Switch between Light and Dark mode" data-cursor="Theme">
+          <span class="theme-icon sun-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+          <span class="theme-icon moon-icon" aria-hidden="true">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+          <span class="theme-label" id="theme-toggle-label">DARK</span>
+        </button>
+
+        <a href="#contact" class="btn-header" data-cursor="Connect">
+          <span>Inquire</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Open mobile navigation menu" aria-expanded="false"
+          aria-controls="mobile-drawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-links">
+      <a href="#hero" class="mobile-nav-link"><span>01</span> Home</a>
+      <a href="#about" class="mobile-nav-link"><span>02</span> About</a>
+      <a href="#projects" class="mobile-nav-link"><span>03</span> Projects</a>
+      <a href="#skills" class="mobile-nav-link"><span>04</span> Skills</a>
+      <a href="#experience" class="mobile-nav-link"><span>05</span> Experience</a>
+      <a href="#credentials" class="mobile-nav-link"><span>06</span> Education</a>
+      <a href="#contact" class="mobile-nav-link"><span>07</span> Contact</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <div class="mobile-theme-row" style="margin-bottom: 0.85rem;">
+        <button id="mobile-theme-toggle" class="mobile-footer-btn" type="button" style="width: 100%; justify-content: center; gap: 0.55rem;" aria-label="Toggle dark mode">
+          <span class="theme-icon sun-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+          <span class="theme-icon moon-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+          <span id="mobile-theme-text">SWITCH TO DARK MODE</span>
+        </button>
+      </div>
+
+      <div class="mobile-contact-links">
+        <a href="mailto:dhananjay42819@gmail.com" class="mobile-footer-btn" aria-label="Send Email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span>dhananjay42819@gmail.com</span>
+        </a>
+        <a href="tel:+917536054568" class="mobile-footer-btn" aria-label="Call Direct">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <span>+91 7536054568</span>
+        </a>
+      </div>
+      <div class="mobile-meta-tag">
+        <span>Agra, Uttar Pradesh, India</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+
+    <!-- =======================================================================
+         SECTION: Hero
+         ======================================================================= -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+      <div class="container-wide">
+        <div class="hero-grid">
+
+          <!-- Editorial Lead -->
+          <div class="hero-editorial-lead" data-reveal="up">
+            <div class="hero-meta-badge">
+              <span class="editorial-tag">Active Portfolio Dossier</span>
+              <span>•</span>
+              <span>2022 – 2026</span>
+            </div>
+
+            <h1 id="hero-heading" class="hero-name-heading">
+              Dhananjay Sharma
+              <span class="serif-accent">Full Stack & MERN Engineer</span>
+            </h1>
+
+            <p class="hero-lead-summary">
+              <strong>B.Tech Information Technology graduate</strong> with hands-on experience in full-stack web
+              development and MERN stack applications through academic projects and professional internships. Proficient
+              in crafting robust client-server architectures, responsive user interfaces, and scalable RESTful APIs.
+            </p>
+
+            <!-- Dedicated Separate Highlight for Additional Roles -->
+            <div class="hero-role-callout">
+              <span class="role-callout-dot" aria-hidden="true"></span>
+              <span class="role-callout-text">Also Open to: Frontend Development &amp; Web Designing Roles</span>
+            </div>
+
+            <div class="hero-action-row">
+              <a href="#projects" class="btn-primary" data-cursor="Showcase">
+                <span>Explore Featured Work</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#contact" class="btn-secondary" data-cursor="Contact">
+                <span>Direct Inquiries</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Interactive Cursor-Reactive Developer Terminal -->
+            <div class="hero-interactive-terminal" data-cursor-tilt data-cursor="Terminal"
+              aria-label="Interactive Developer Console">
+              <div class="terminal-topbar">
+                <div class="terminal-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="terminal-title">dhananjay@macbook-pro:~ (zsh)</div>
+                <div class="terminal-badge"><span class="pulse-green"></span> live session</div>
+              </div>
+
+              <div class="terminal-tabs">
+                <button type="button" class="term-tab active" data-cmd="profile">profile.sh</button>
+                <button type="button" class="term-tab" data-cmd="stack">stack.json</button>
+                <button type="button" class="term-tab" data-cmd="projects">deployments.log</button>
+                <button type="button" class="term-tab" data-cmd="contact">contact.vcf</button>
+              </div>
+
+              <div class="terminal-body" id="hero-terminal-screen">
+                <div class="term-line prompt-line">
+                  <span class="term-user">dhananjay@portfolio</span>:<span class="term-dir">~</span>$ <span
+                    class="term-cmd-text">cat profile.sh</span>
+                </div>
+                <div class="term-line output-line">
+                  <span class="term-highlight">Engineer:</span> Dhananjay Sharma<br>
+                  <span class="term-highlight">Degree:</span> B.Tech in Information Technology (2022–2026)<br>
+                  <span class="term-highlight">Institution:</span> Hindustan College of Science &amp; Technology,
+                  Mathura (AKTU)<br>
+                  <span class="term-highlight">Current Role:</span> Frontend Developer Intern @ SafexNet World Pvt.
+                  Ltd.<br>
+                  <span class="term-highlight">Prior Intern:</span> Web Development Intern @ CodeAlpha<br>
+                  <span class="term-highlight">Status:</span> Open to Full Stack, Frontend &amp; Web Designing Roles
+                </div>
+                <div class="term-line prompt-line term-cursor-line">
+                  <span class="term-user">dhananjay@portfolio</span>:<span class="term-dir">~</span>$ <span
+                    class="terminal-cursor">_</span>
+                </div>
+              </div>
+
+              <div class="terminal-quick-cmds">
+                <span class="quick-label">QUICK RUN:</span>
+                <button type="button" class="quick-cmd-btn" data-run="whoami">whoami</button>
+                <button type="button" class="quick-cmd-btn" data-run="stack">stack</button>
+                <button type="button" class="quick-cmd-btn" data-run="projects">projects</button>
+                <button type="button" class="quick-cmd-btn" data-run="clear">clear</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Hero Portrait & Technical Dossier Duo -->
+          <div class="hero-right-duo" data-reveal="scale" data-delay="180">
+            <!-- Authentic Engineer Portrait Card -->
+            <div class="hero-portrait-card" data-cursor-tilt aria-label="Dhananjay Sharma Official Portrait">
+              <div class="portrait-meta-bar">
+                <span class="portrait-tag-badge">Verified Identity</span>
+                <span>Plate // 01-BIO</span>
+              </div>
+              <div class="portrait-frame">
+                <span class="portrait-corner-tl" aria-hidden="true"></span>
+                <span class="portrait-corner-tr" aria-hidden="true"></span>
+                <span class="portrait-corner-bl" aria-hidden="true"></span>
+                <span class="portrait-corner-br" aria-hidden="true"></span>
+                <img src="assets/images/dhananjay-profile.png"
+                  alt="Dhananjay Sharma - Full Stack Developer &amp; MERN Engineer" class="hero-portrait-img"
+                  loading="eager" width="1086" height="1448" />
+              </div>
+              <div class="portrait-footer-info">
+                <div>
+                  <div class="portrait-caption-name">Dhananjay Sharma</div>
+                  <div class="portrait-caption-sub">Full Stack Developer &amp; MERN Engineer</div>
+                </div>
+                <div
+                  style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); text-align: right;">
+                  B.Tech IT '26<br><span style="color: var(--accent-sage-dark); font-weight: 600;">Mathura / Agra</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technical Dossier Card -->
+            <aside class="hero-dossier-card" data-cursor-tilt aria-label="Curriculum & Profile Dossier">
+              <div class="dossier-header">
+                <span class="dossier-tag">Engineer Profile &amp; Specs</span>
+                <span class="dossier-ref">REF // DS-IT-2026</span>
+              </div>
+
+              <div class="dossier-items">
+                <div class="dossier-item">
+                  <span class="dossier-label">Degree</span>
+                  <div class="dossier-value">
+                    B.Tech in Information Technology
+                    <small>Hindustan College of Science &amp; Technology, Mathura</small>
+                  </div>
+                </div>
+
+                <div class="dossier-item">
+                  <span class="dossier-label">Core Focus</span>
+                  <div class="dossier-value">
+                    Full Stack MERN Architecture, Single-Page Applications &amp; RESTful APIs
+                  </div>
+                </div>
+
+                <div class="dossier-item">
+                  <span class="dossier-label">Key Stack</span>
+                  <div class="dossier-value">
+                    <div class="dossier-tech-pills">
+                      <span class="tech-pill">React.js</span>
+                      <span class="tech-pill">Node.js</span>
+                      <span class="tech-pill">Express.js</span>
+                      <span class="tech-pill">MongoDB</span>
+                      <span class="tech-pill">TypeScript</span>
+                      <span class="tech-pill">Java</span>
+                      <span class="tech-pill">Docker</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dossier-item">
+                  <span class="dossier-label">Current Role</span>
+                  <div class="dossier-value">
+                    Frontend Developer Intern
+                    <small>SafexNet World Pvt. Ltd. (Jul 2026 – Present)</small>
+                  </div>
+                </div>
+
+                <div class="dossier-item">
+                  <span class="dossier-label">Availability</span>
+                  <div class="dossier-value" style="color: var(--accent-rust); font-weight: 600;">
+                    Open to Roles
+                    <small style="color: var(--ink-secondary); font-weight: normal;">Frontend Development, Web Designing
+                      &amp; Full Stack Opportunities</small>
+                  </div>
+                </div>
+
+                <div class="dossier-item">
+                  <span class="dossier-label">Contact</span>
+                  <div class="dossier-value font-mono">
+                    dhananjay42819@gmail.com
+                    <small>+91 7536054568</small>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+        </div>
+
+        <!-- Ledger Ticker Strip -->
+        <div class="hero-ticker-strip" data-reveal="up" data-delay="300">
+          <div class="ticker-entry">
+            <span class="label">Academic Timeline</span>
+            <span class="value">2022 — 2026</span>
+            <span class="sub">AKTU Affiliated B.Tech</span>
+          </div>
+
+          <div class="ticker-entry">
+            <span class="label">Featured Deployments</span>
+            <span class="value">3 Live Systems</span>
+            <span class="sub">NetraDeep, TaskFlow, AI Chatbot</span>
+          </div>
+
+          <div class="ticker-entry">
+            <span class="label">Internship Record</span>
+            <span class="value">2 Organizations</span>
+            <span class="sub">SafexNet World & CodeAlpha</span>
+          </div>
+
+          <div class="ticker-entry">
+            <span class="label">Verified Accreditations</span>
+            <span class="value">4 Certifications</span>
+            <span class="sub">RCPL, Infosys, Google Cloud, UniAthena</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         INTER-SECTION: Continuous Animated Tech Marquee Strip
+         ======================================================================= -->
+    <div class="tech-marquee-section" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>React.js</span> <span class="marquee-sep">//</span>
+          <span>Node.js</span> <span class="marquee-sep">//</span>
+          <span>Express.js</span> <span class="marquee-sep">//</span>
+          <span>MongoDB</span> <span class="marquee-sep">//</span>
+          <span>JavaScript ES6+</span> <span class="marquee-sep">//</span>
+          <span>TypeScript</span> <span class="marquee-sep">//</span>
+          <span>Core Java</span> <span class="marquee-sep">//</span>
+          <span>RESTful APIs</span> <span class="marquee-sep">//</span>
+          <span>Docker</span> <span class="marquee-sep">//</span>
+          <span>JWT Security</span> <span class="marquee-sep">//</span>
+          <span>Redux Toolkit</span> <span class="marquee-sep">//</span>
+          <span>Tailwind CSS</span> <span class="marquee-sep">//</span>
+          <span>Git &amp; GitHub</span> <span class="marquee-sep">//</span>
+          <span>B.Tech IT Mathura</span> <span class="marquee-sep">//</span>
+        </div>
+        <div class="marquee-content">
+          <span>React.js</span> <span class="marquee-sep">//</span>
+          <span>Node.js</span> <span class="marquee-sep">//</span>
+          <span>Express.js</span> <span class="marquee-sep">//</span>
+          <span>MongoDB</span> <span class="marquee-sep">//</span>
+          <span>JavaScript ES6+</span> <span class="marquee-sep">//</span>
+          <span>TypeScript</span> <span class="marquee-sep">//</span>
+          <span>Core Java</span> <span class="marquee-sep">//</span>
+          <span>RESTful APIs</span> <span class="marquee-sep">//</span>
+          <span>Docker</span> <span class="marquee-sep">//</span>
+          <span>JWT Security</span> <span class="marquee-sep">//</span>
+          <span>Redux Toolkit</span> <span class="marquee-sep">//</span>
+          <span>Tailwind CSS</span> <span class="marquee-sep">//</span>
+          <span>Git &amp; GitHub</span> <span class="marquee-sep">//</span>
+          <span>B.Tech IT Mathura</span> <span class="marquee-sep">//</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================================================================
+         SECTION: About Me & Engineering Foundation
+         ======================================================================= -->
+    <section id="about" class="about-section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Sticky Left Column -->
+          <div class="about-left-sticky" data-reveal="left">
+            <div class="section-indexer">
+              <span>01</span> / Professional Profile
+            </div>
+
+            <h2 id="about-heading" class="about-manifesto-heading">
+              Grounded in software fundamentals,
+              <span class="accent-italic">driven by clean client-server architecture.</span>
+            </h2>
+
+            <div class="academic-badge-box">
+              <div class="degree">B.Tech Information Technology</div>
+              <div class="college">Hindustan College of Science and Technology, Mathura</div>
+              <div class="affiliation">Affiliated to Dr. A.P.J. Abdul Kalam Technical University (2022–2026)</div>
+            </div>
+
+            <!-- Engineering Milestones Matrix -->
+            <div class="about-metrics-matrix" aria-label="Key Career Metrics">
+              <div class="metric-card">
+                <div class="num">04 Yrs</div>
+                <div class="label">B.Tech IT Rigor</div>
+              </div>
+              <div class="metric-card">
+                <div class="num">03 Live</div>
+                <div class="label">Featured Projects</div>
+              </div>
+              <div class="metric-card">
+                <div class="num">02 Corps</div>
+                <div class="label">Industry Internships</div>
+              </div>
+              <div class="metric-card">
+                <div class="num">04 Certs</div>
+                <div class="label">Verified Accreditations</div>
+              </div>
+            </div>
+
+            <!-- Interactive Magnetic Tech Constellation Canvas -->
+            <div class="about-interactive-canvas-card" data-cursor-tilt data-cursor="Interact"
+              aria-label="Interactive Architecture Ecosystem">
+              <div class="canvas-card-header">
+                <div class="canvas-header-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                  <span>Interactive Tech Constellation</span>
+                </div>
+                <span class="canvas-header-badge"><span class="pulse-green"></span> Follows Cursor</span>
+              </div>
+
+              <div class="canvas-wrapper">
+                <canvas id="tech-orbit-canvas" width="460" height="250"
+                  aria-label="Interactive tech nodes connected to cursor"></canvas>
+                <div class="canvas-hint-overlay">
+                  <span>Hover / Move cursor to guide gravitational field</span>
+                </div>
+              </div>
+
+              <div class="canvas-card-footer">
+                <div class="orbit-pills-row">
+                  <span class="orbit-pill" data-tech="React">React.js</span>
+                  <span class="orbit-pill" data-tech="Node">Node.js</span>
+                  <span class="orbit-pill" data-tech="Express">Express</span>
+                  <span class="orbit-pill" data-tech="Mongo">MongoDB</span>
+                  <span class="orbit-pill" data-tech="Docker">Docker</span>
+                  <span class="orbit-pill" data-tech="TS">TypeScript</span>
+                  <span class="orbit-pill" data-tech="Java">Java</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Right Column -->
+          <div class="about-content-paragraphs" data-reveal="up" data-delay="200">
+            <p class="editorial-paragraph">
+              As documented in my official profile, I am a <strong>B.Tech Information Technology graduate</strong> with
+              hands-on experience in Full Stack Web Development and MERN Stack applications through rigorous academic
+              projects and production-oriented internships.
+            </p>
+
+            <p class="editorial-paragraph">
+              I am proficient in <strong>Java, JavaScript, TypeScript, React.js, Node.js, Express.js, MongoDB, MySQL,
+                RESTful APIs, and Docker</strong>. My technical focus centers on constructing responsive user
+              interfaces, modular single-page applications, secure JWT-based authentication mechanisms, and resilient,
+              scalable web solutions.
+            </p>
+
+            <p class="editorial-paragraph">
+              My engineering approach is anchored in a firm grasp of core computer science fundamentals: <strong>Data
+                Structures & Algorithms (DSA), Object-Oriented Programming (OOP), Database Management Systems (DBMS),
+                Operating Systems, Computer Networks, and the Software Development Life Cycle (SDLC)</strong>. I am
+              deeply passionate about software development, systematic problem solving, and continuously mastering
+              modern technologies.
+            </p>
+
+            <!-- 4 Architecture Pillars -->
+            <div class="pillars-grid">
+              <div class="pillar-card" data-cursor-tilt>
+                <div class="pillar-num">01 // UI & SPAs</div>
+                <div class="pillar-title">Component-Based Design</div>
+                <div class="pillar-desc">
+                  Building modular, maintainable React interfaces with Redux Toolkit, Context API, and state
+                  optimization.
+                </div>
+              </div>
+
+              <div class="pillar-card" data-cursor-tilt>
+                <div class="pillar-num">02 // Backend Services</div>
+                <div class="pillar-title">RESTful & MVC Systems</div>
+                <div class="pillar-desc">
+                  Engineering secure Express.js backends with middleware, JWT authorization, and role-based access
+                  control.
+                </div>
+              </div>
+
+              <div class="pillar-card" data-cursor-tilt>
+                <div class="pillar-num">03 // Data Architecture</div>
+                <div class="pillar-title">Relational & NoSQL</div>
+                <div class="pillar-desc">
+                  Schema design and query optimization across MongoDB, Mongoose, and structured MySQL databases.
+                </div>
+              </div>
+
+              <div class="pillar-card" data-cursor-tilt>
+                <div class="pillar-num">04 // Core Principles</div>
+                <div class="pillar-title">DSA & SDLC Rigor</div>
+                <div class="pillar-desc">
+                  Applying algorithmic efficiency, OOP principles, and clean Git workflows across every engineering
+                  cycle.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION: Featured Projects Showcase
+         ======================================================================= -->
+    <section id="projects" class="projects-section" aria-labelledby="projects-heading">
+      <div class="container-wide">
+
+        <div class="projects-header-row" data-reveal="up">
+          <div class="projects-header-left">
+            <div class="section-indexer">
+              <span>02</span> / Production & Academic Deployments
+            </div>
+            <h2 id="projects-heading" class="section-title">
+              Featured Work
+              <span class="section-title-sub">Verified implementations grounded in resume documentation</span>
+            </h2>
+          </div>
+          <div class="projects-header-note">
+            <span>4 FEATURED PROJECTS</span><br>
+            <span>VERIFIED REPOSITORIES & DEMOS</span>
+          </div>
+        </div>
+
+        <!-- Master Project 01: NetraDeep -->
+        <article class="project-master-card" data-cursor-tilt data-reveal="up" data-delay="100"
+          aria-label="Project 01: NetraDeep">
+          <div class="project-master-grid">
+
+            <!-- Technical Blueprint Visual -->
+            <div class="project-master-visual">
+              <div class="blueprint-header">
+                <span class="blueprint-tag">Deep Learning & Diagnostic Pipeline</span>
+                <span class="blueprint-status">Status: Deployed & Active</span>
+              </div>
+
+              <div class="blueprint-diagram">
+                <div class="blueprint-stage-row">
+                  <div class="blueprint-node">
+                    <strong>01. Image Upload</strong>
+                    <span>Retinal fundus image intake & client preprocessing</span>
+                  </div>
+                  <div class="blueprint-connector">→</div>
+                  <div class="blueprint-node">
+                    <strong>02. ML Inference</strong>
+                    <span>Deep learning model classification pipeline</span>
+                  </div>
+                </div>
+
+                <div class="blueprint-stage-row">
+                  <div class="blueprint-node">
+                    <strong>03. Prediction Workflow</strong>
+                    <span>Real-time disease classification result generator</span>
+                  </div>
+                  <div class="blueprint-connector">→</div>
+                  <div class="blueprint-node">
+                    <strong>04. React UI Display</strong>
+                    <span>Responsive diagnostic interface on desktop & mobile</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blueprint-footer-metrics">
+                <span>Vercel Edge Deployment</span>
+                <span>Optimized Prediction Workflow</span>
+                <span>Mobile Responsive</span>
+              </div>
+            </div>
+
+            <!-- Master Project Details -->
+            <div class="project-master-info">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-index">01 / MASTER WORK</span>
+                  <span class="project-domain">Healthcare AI Web Application</span>
+                </div>
+
+                <h3 class="project-title">NetraDeep</h3>
+                <div class="project-subtitle">Retinal Fundus Disease Classification using Deep Learning</div>
+
+                <ul class="project-bullet-list">
+                  <li>Developed an AI-powered web application for retinal disease classification using deep learning.
+                  </li>
+                  <li>Built a responsive React.js frontend with image upload and real-time prediction functionality.
+                  </li>
+                  <li>Integrated machine learning prediction workflows with a user-friendly web interface.</li>
+                  <li>Implemented image preprocessing and optimized prediction workflow for accurate disease
+                    classification.</li>
+                  <li>Deployed the application on Vercel with a responsive interface tailored for desktop and mobile
+                    devices.</li>
+                </ul>
+
+                <div class="project-tech-stack">
+                  <span class="tech-pill">React.js</span>
+                  <span class="tech-pill">Deep Learning</span>
+                  <span class="tech-pill">Image Preprocessing</span>
+                  <span class="tech-pill">Prediction Workflows</span>
+                  <span class="tech-pill">Vercel Deployment</span>
+                  <span class="tech-pill">Responsive UI</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://netra-deep.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn-project-live" data-cursor="Live App">
+                  <span>Launch Live Demo</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://github.com/Dhananjaysharma824/NetraDeep-Retinal_Fundus_Disease_Detection_Using_Image_Classification"
+                  target="_blank" rel="noopener noreferrer" class="btn-project-link" data-cursor="Source">
+                  <span>GitHub Repository</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Secondary Projects Grid: Projects 02, 03 & 04 -->
+        <div class="projects-secondary-grid">
+
+          <!-- Project 02: TaskFlow -->
+          <article class="project-dossier-card" data-cursor-tilt data-reveal="up" data-delay="200"
+            aria-label="Project 02: TaskFlow">
+            <div class="project-card-header">
+              <span class="project-index">02 / MERN PLATFORM</span>
+              <span class="project-domain">Full-Stack Application</span>
+            </div>
+
+            <!-- Architectural Schema Mockup -->
+            <div class="project-card-schema">
+              <div class="schema-title-bar">
+                <span>TaskFlow // Auth & CRUD Topology</span>
+                <span>JWT RBAC</span>
+              </div>
+              <div class="schema-code-body">
+                <span class="keyword">router</span>.post(<span class="str">'/api/tasks'</span>, <span
+                  class="fn">verifyToken</span>, <span class="fn">checkRole</span>, <span
+                  class="fn">createTask</span>);<br>
+                <span class="keyword">const</span> protectedRoute = <span class="fn">createProtectedHandler</span>({
+                auth: <span class="str">'Bearer JWT'</span> });<br>
+                <span class="keyword">db</span>.collection(<span class="str">'tasks'</span>).find({ user: req.userId });
+              </div>
+              <div class="schema-badge">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+                <span>MongoDB + Express + React + Node.js</span>
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">TaskFlow</h3>
+              <div class="project-subtitle">MERN Task Management Application</div>
+
+              <ul class="project-bullet-list">
+                <li>Developed a full-stack task management application using React.js, Node.js, Express.js, and MongoDB.
+                </li>
+                <li>Implemented JWT-based authentication, protected routes, and role-based access control.</li>
+                <li>Developed and integrated RESTful APIs with CRUD functionality for seamless frontend-backend
+                  communication.</li>
+                <li>Designed a responsive user interface with efficient state management for improved user experience.
+                </li>
+                <li>Optimized API communication and database operations to ensure smooth task management.</li>
+              </ul>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">React.js</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">Express.js</span>
+                <span class="tech-pill">MongoDB</span>
+                <span class="tech-pill">JWT Auth</span>
+                <span class="tech-pill">RESTful APIs</span>
+                <span class="tech-pill">RBAC</span>
+              </div>
+
+              <div class="project-card-footer">
+                <a href="https://taskflow-todo-app-bice.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn-project-live" data-cursor="Live App">
+                  <span>Live Demo</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://github.com/Dhananjaysharma824/Taskflow-todo-app" target="_blank"
+                  rel="noopener noreferrer" class="btn-project-link" data-cursor="Source">
+                  <span>GitHub Repository</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03: RepoPilot AI -->
+          <article class="project-dossier-card" data-cursor-tilt data-reveal="up" data-delay="250"
+            aria-label="Project 03: RepoPilot AI">
+            <div class="project-card-header">
+              <span class="project-index">03 / AI-POWERED DEVELOPER TOOL</span>
+              <span class="project-domain">Full-Stack Application</span>
+            </div>
+
+            <!-- Architectural Schema Mockup -->
+            <div class="project-card-schema">
+              <div class="schema-title-bar">
+                <span>RepoPilot // Analysis &amp; Tree Engine</span>
+                <span>OCTOKIT + GEMINI</span>
+              </div>
+              <div class="schema-code-body">
+                <span class="keyword">const</span> repoTree = <span class="keyword">await</span> <span
+                  class="fn">fetchGitHubTree</span>(repoUrl);<br>
+                <span class="keyword">const</span> techStack = <span class="fn">detectTechnologies</span>(repoTree.files);<br>
+                <span class="keyword">const</span> insights = <span class="keyword">await</span> <span
+                  class="fn">gemini</span>.<span class="fn">generateInsights</span>({ repoTree, techStack });
+              </div>
+              <div class="schema-badge">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>Next.js + GitHub REST API + Gemini AI</span>
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">RepoPilot AI</h3>
+              <div class="project-subtitle">AI-Powered Repository Analysis Platform</div>
+
+              <ul class="project-bullet-list">
+                <li>Developed an AI-powered web application for repository analysis and codebase exploration.</li>
+                <li>Integrated GitHub REST API to retrieve repository metadata, languages, and file trees.</li>
+                <li>Built an interactive explorer featuring searchable and expandable folders and files.</li>
+                <li>Implemented technology stack detection and repository architecture insights.</li>
+                <li>Integrated Google Gemini API for AI-assisted explanations and learning roadmaps.</li>
+              </ul>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">Next.js</span>
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">TypeScript</span>
+                <span class="tech-pill">Tailwind CSS</span>
+                <span class="tech-pill">Supabase</span>
+                <span class="tech-pill">GitHub REST API</span>
+                <span class="tech-pill">Google Gemini API</span>
+              </div>
+
+              <div class="project-card-footer">
+                <a href="https://github.com/Dhananjaysharma824/RepoPilot-AI" target="_blank"
+                  rel="noopener noreferrer" class="btn-project-link" data-cursor="Source">
+                  <span>GitHub Repository</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 04: React AI Chatbot -->
+          <article class="project-dossier-card" data-cursor-tilt data-reveal="up" data-delay="300"
+            aria-label="Project 04: React AI Chatbot">
+            <div class="project-card-header">
+              <span class="project-index">04 / CONVERSATIONAL AI</span>
+              <span class="project-domain">Dynamic Web Client</span>
+            </div>
+
+            <!-- Architectural Schema Mockup -->
+            <div class="project-card-schema">
+              <div class="schema-title-bar">
+                <span>Chatbot // Real-time Message Stream</span>
+                <span>AI API STREAM</span>
+              </div>
+              <div class="schema-code-body">
+                <span class="keyword">const</span> [messages, setMessages] = <span class="fn">useState</span>([]);<br>
+                <span class="keyword">const</span> response = <span class="keyword">await</span> <span
+                  class="fn">fetchAiStream</span>(prompt);<br>
+                <span class="fn">renderDynamicMessage</span>({ role: <span class="str">'assistant'</span>, stream:
+                response });
+              </div>
+              <div class="schema-badge">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                <span>React State Management + AI API Integration</span>
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">React AI Chatbot</h3>
+              <div class="project-subtitle">Interactive AI Assistant Web Application</div>
+
+              <ul class="project-bullet-list">
+                <li>Developed an AI-powered chatbot application using React.js with a modern and responsive user
+                  interface.</li>
+                <li>Integrated AI APIs to generate real-time conversational responses.</li>
+                <li>Implemented dynamic message rendering and efficient state management.</li>
+                <li>Built reusable React components and optimized API calls for faster response handling.</li>
+                <li>Enhanced user experience through responsive design and interactive chat interface.</li>
+              </ul>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">React.js</span>
+                <span class="tech-pill">AI API Integration</span>
+                <span class="tech-pill">Dynamic Rendering</span>
+                <span class="tech-pill">State Management</span>
+                <span class="tech-pill">Reusable Components</span>
+              </div>
+
+              <div class="project-card-footer">
+                <a href="https://react-ai-chatbot-sigma.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn-project-live" data-cursor="Live App">
+                  <span>Live Demo</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://github.com/Dhananjaysharma824/React-Ai-Chatbot" target="_blank"
+                  rel="noopener noreferrer" class="btn-project-link" data-cursor="Source">
+                  <span>GitHub Repository</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION: Technical Skills Directory
+         ======================================================================= -->
+    <section id="skills" class="skills-section" aria-labelledby="skills-heading">
+      <div class="container-wide">
+
+        <div class="skills-layout-grid">
+
+          <!-- Sticky Left Navigation -->
+          <div class="skills-nav-column" data-reveal="left">
+            <div class="skills-nav-header">
+              <div class="section-indexer">
+                <span>03</span> / Technical Competencies
+              </div>
+
+              <h2 id="skills-heading" class="section-title" style="font-size: 2.2rem; margin-bottom: 1.25rem;">
+                Skills Directory
+              </h2>
+
+              <!-- Interactive Real-time Skills Search -->
+              <div class="skills-search-wrapper">
+                <svg class="skills-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="skills-search-input" class="skills-search-input"
+                  placeholder="Quick search skills (e.g. React, Docker)..." aria-label="Search technical skills">
+              </div>
+            </div>
+
+            <!-- Tab Buttons Container -->
+            <div class="skills-tabs-scroller" role="tablist" aria-label="Skill categories">
+              <button class="skills-tab-btn active" data-category="all" data-cursor="Filter">
+                <span>All Categories</span>
+                <span class="tab-count">36 Skills</span>
+              </button>
+              <button class="skills-tab-btn" data-category="languages" data-cursor="Filter">
+                <span>Languages</span>
+                <span class="tab-count">5</span>
+              </button>
+              <button class="skills-tab-btn" data-category="frontend" data-cursor="Filter">
+                <span>Frontend</span>
+                <span class="tab-count">10</span>
+              </button>
+              <button class="skills-tab-btn" data-category="backend" data-cursor="Filter">
+                <span>Backend</span>
+                <span class="tab-count">6</span>
+              </button>
+              <button class="skills-tab-btn" data-category="database" data-cursor="Filter">
+                <span>Database</span>
+                <span class="tab-count">3</span>
+              </button>
+              <button class="skills-tab-btn" data-category="tools" data-cursor="Filter">
+                <span>Tools & Platforms</span>
+                <span class="tab-count">7</span>
+              </button>
+              <button class="skills-tab-btn" data-category="concepts" data-cursor="Filter">
+                <span>Core Concepts</span>
+                <span class="tab-count">9</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Skills Cards Grid -->
+          <div class="skills-directory-grid" data-reveal="up" data-delay="150">
+
+            <!-- Category 1: Languages -->
+            <div class="skill-category-card" data-category="languages">
+              <div class="skill-card-header">
+                <h3 class="skill-card-title">Languages</h3>
+                <span class="skill-card-tag">5 Items</span>
+              </div>
+              <div class="skill-items-list">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+              </div>
+            </div>
+
+            <!-- Category 2: Frontend -->
+            <div class="skill-category-card" data-category="frontend">
+              <div class="skill-card-header">
+                <h3 class="skill-card-title">Frontend Engineering</h3>
+                <span class="skill-card-tag">10 Items</span>
+              </div>
+              <div class="skill-items-list">
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Redux Toolkit</span>
+                <span class="skill-tag">Context API</span>
+                <span class="skill-tag">React Router</span>
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">Tailwind CSS</span>
+                <span class="skill-tag">React Hooks</span>
+                <span class="skill-tag">SPA</span>
+                <span class="skill-tag">Component-Based Architecture</span>
+              </div>
+            </div>
+
+            <!-- Category 3: Backend -->
+            <div class="skill-category-card" data-category="backend">
+              <div class="skill-card-header">
+                <h3 class="skill-card-title">Backend Architecture</h3>
+                <span class="skill-card-tag">6 Items</span>
+              </div>
+              <div class="skill-items-list">
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">RESTful APIs</span>
+                <span class="skill-tag">JWT Authentication</span>
+                <span class="skill-tag">Middleware</span>
+                <span class="skill-tag">MVC Architecture</span>
+              </div>
+            </div>
+
+            <!-- Category 4: Database -->
+            <div class="skill-category-card" data-category="database">
+              <div class="skill-card-header">
+                <h3 class="skill-card-title">Database Management</h3>
+                <span class="skill-card-tag">3 Items</span>
+              </div>
+              <div class="skill-items-list">
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Mongoose</span>
+                <span class="skill-tag">MySQL</span>
+              </div>
+            </div>
+
+            <!-- Category 5: Tools -->
+            <div class="skill-category-card" data-category="tools">
+              <div class="skill-card-header">
+                <h3 class="skill-card-title">Tools & Infrastructure</h3>
+                <span class="skill-card-tag">7 Items</span>
+              </div>
+              <div class="skill-items-list">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">Postman</span>
+                <span class="skill-tag">Axios</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">npm</span>
+                <span class="skill-tag">Vercel</span>
+              </div>
+            </div>
+
+            <!-- Category 6: Core Concepts -->
+            <div class="skill-category-card" data-category="concepts">
+              <div class="skill-card-header">
+                <h3 class="skill-card-title">Core Computer Science</h3>
+                <span class="skill-card-tag">9 Items</span>
+              </div>
+              <div class="skill-items-list">
+                <span class="skill-tag">DSA</span>
+                <span class="skill-tag">OOP</span>
+                <span class="skill-tag">SDLC</span>
+                <span class="skill-tag">CRUD Operations</span>
+                <span class="skill-tag">State Management</span>
+                <span class="skill-tag">Client-Server Architecture</span>
+                <span class="skill-tag">Git Workflow</span>
+                <span class="skill-tag">Deployment</span>
+                <span class="skill-tag">Debugging</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION: Professional Experience
+         ======================================================================= -->
+    <section id="experience" class="experience-section" aria-labelledby="experience-heading">
+      <div class="container">
+
+        <div data-reveal="up">
+          <div class="section-indexer">
+            <span>04</span> / Career Trajectory
+          </div>
+          <h2 id="experience-heading" class="section-title">
+            Professional Experience
+            <span class="section-title-sub">Hands-on industry internships documented in resume</span>
+          </h2>
+        </div>
+
+        <div class="experience-ledger">
+
+          <!-- Experience 01: SafexNet World -->
+          <article class="ledger-entry" data-reveal="up" data-delay="100"
+            aria-label="Frontend Developer Intern at SafexNet World Pvt. Ltd.">
+            <div class="ledger-meta-sidebar">
+              <span class="ledger-dates">Jul 2026 – Present</span>
+              <span class="ledger-badge current">Current Engagement</span>
+              <h3 class="ledger-company">SafexNet World Pvt. Ltd.</h3>
+              <div class="ledger-role-title">Frontend Developer Intern</div>
+            </div>
+
+            <div class="ledger-details">
+              <ul class="ledger-responsibilities">
+                <li>Developed and maintained responsive web applications using <strong>React.js, JavaScript, HTML5,
+                    CSS3, and Tailwind CSS</strong>.</li>
+                <li>Built and optimized multiple website pages including <strong>Partners, Contact Us, and internal
+                    platform pages</strong>.</li>
+                <li>Developed reusable React components and followed modular development practices to improve code
+                  maintainability.</li>
+                <li>Integrated APIs and enhanced user experience through responsive design and frontend performance
+                  optimization.</li>
+              </ul>
+
+              <div class="ledger-tech-row">
+                <span class="tech-pill">React.js</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">Tailwind CSS</span>
+                <span class="tech-pill">API Integration</span>
+                <span class="tech-pill">Modular Components</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Experience 02: CodeAlpha -->
+          <article class="ledger-entry" data-reveal="up" data-delay="200"
+            aria-label="Full Stack Development Intern at CodeAlpha">
+            <div class="ledger-meta-sidebar">
+              <span class="ledger-dates">Jul 2025</span>
+              <span class="ledger-badge completed">Completed Internship</span>
+              <h3 class="ledger-company">CodeAlpha</h3>
+              <div class="ledger-role-title">Full Stack Development Intern</div>
+            </div>
+
+            <div class="ledger-details">
+              <ul class="ledger-responsibilities">
+                <li>Built and deployed <strong>3+ full-stack applications</strong> using MERN stack technologies.</li>
+                <li>Developed reusable React components and followed modular coding practices to improve code
+                  maintainability.</li>
+                <li>Integrated <strong>REST APIs with frontend</strong> using efficient state management.</li>
+                <li>Collaborated in a team using Git workflows including <strong>branches, pull requests, and issue
+                    tracking</strong>.</li>
+              </ul>
+
+              <div class="ledger-tech-row">
+                <span class="tech-pill">MERN Stack</span>
+                <span class="tech-pill">React Components</span>
+                <span class="tech-pill">REST APIs</span>
+                <span class="tech-pill">State Management</span>
+                <span class="tech-pill">Git Collaboration</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION: Education & Certifications
+         ======================================================================= -->
+    <section id="credentials" class="credentials-section" aria-labelledby="credentials-heading">
+      <div class="container">
+
+        <div data-reveal="up">
+          <div class="section-indexer">
+            <span>05</span> / Academic Foundation & Accreditations
+          </div>
+          <h2 id="credentials-heading" class="section-title">
+            Education & Certifications
+            <span class="section-title-sub">Formal degree curriculum and accredited specializations</span>
+          </h2>
+        </div>
+
+        <div class="credentials-grid">
+
+          <!-- Education Column -->
+          <div class="edu-column-card" data-reveal="left" data-delay="100">
+            <div class="edu-header-tag">
+              <span class="editorial-tag">Degree Program</span>
+              <span class="font-mono" style="font-size: 0.72rem; color: var(--ink-muted);">FOUR-YEAR DEGREE</span>
+            </div>
+
+            <h3 class="edu-degree-title">B.Tech in Information Technology</h3>
+            <div class="edu-timeline">2022 — 2026</div>
+
+            <div class="edu-institution">Hindustan College of Science and Technology, Mathura</div>
+            <div class="edu-affiliation">(Affiliated to Dr. A.P.J. Abdul Kalam Technical University)</div>
+
+            <div class="edu-curriculum-specs">
+              <div class="spec-line">
+                <span>Discipline:</span>
+                <span>Information Technology</span>
+              </div>
+              <div class="spec-line">
+                <span>Core Curriculum:</span>
+                <span>DSA, OOP, DBMS, OS, Computer Networks, SDLC</span>
+              </div>
+              <div class="spec-line">
+                <span>Practical Domain:</span>
+                <span>Full Stack Web Development & Client-Server Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications Column -->
+          <div class="certs-column" data-reveal="right" data-delay="200">
+
+            <!-- Cert 1 -->
+            <div class="cert-editorial-item">
+              <div class="cert-info">
+                <h4 class="cert-name">Full Stack Development</h4>
+                <div class="cert-issuer">RCPL</div>
+              </div>
+              <span class="cert-year-badge">2025</span>
+            </div>
+
+            <!-- Cert 2 -->
+            <div class="cert-editorial-item">
+              <div class="cert-info">
+                <h4 class="cert-name">Prompt Engineering</h4>
+                <div class="cert-issuer">Infosys Springboard</div>
+              </div>
+              <span class="cert-year-badge">2025</span>
+            </div>
+
+            <!-- Cert 3 -->
+            <div class="cert-editorial-item">
+              <div class="cert-info">
+                <h4 class="cert-name">Introduction to Generative AI</h4>
+                <div class="cert-issuer">Google Cloud</div>
+              </div>
+              <span class="cert-year-badge">Accredited</span>
+            </div>
+
+            <!-- Cert 4 -->
+            <div class="cert-editorial-item">
+              <div class="cert-info">
+                <h4 class="cert-name">Python Programming</h4>
+                <div class="cert-issuer">UniAthena</div>
+              </div>
+              <span class="cert-year-badge">2024</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION: Contact & Communication
+         ======================================================================= -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="contact-editorial-grid">
+
+          <!-- Contact Left: Channels & Verified Registries -->
+          <div data-reveal="up">
+            <div class="section-indexer">
+              <span>06</span> / Communication Channel
+            </div>
+
+            <h2 id="contact-heading" class="contact-headline">
+              Initiate a dialogue.
+              <span class="accent-italic">Open to software engineering roles.</span>
+            </h2>
+
+            <p class="contact-lead-text">
+              For professional inquiries, full-stack development opportunities, or technical collaboration, feel free to
+              reach out directly through my verified email or direct telephone line.
+            </p>
+
+            <!-- Separate Highlight for Additional Roles -->
+            <div class="hero-role-callout">
+              <span class="role-callout-dot" aria-hidden="true"></span>
+              <span class="role-callout-text">Also Open to: Frontend Development &amp; Web Designing Roles</span>
+            </div>
+
+            <div class="contact-cards-stack">
+              <!-- Email Card -->
+              <div class="contact-card">
+                <div class="contact-card-left">
+                  <span class="contact-card-type">Electronic Mail</span>
+                  <a href="mailto:dhananjay42819@gmail.com" class="contact-card-val" data-cursor="Email">
+                    dhananjay42819@gmail.com
+                  </a>
+                </div>
+                <div class="contact-card-actions">
+                  <button class="btn-icon-action" data-copy="dhananjay42819@gmail.com" aria-label="Copy email address"
+                    title="Copy email address">
+                    <span class="tooltip">Copy</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </button>
+                  <a href="mailto:dhananjay42819@gmail.com" class="btn-icon-action" aria-label="Send email"
+                    data-cursor="Compose">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Phone Card -->
+              <div class="contact-card">
+                <div class="contact-card-left">
+                  <span class="contact-card-type">Direct Telephone</span>
+                  <a href="tel:+917536054568" class="contact-card-val" data-cursor="Call">
+                    +91 7536054568
+                  </a>
+                </div>
+                <div class="contact-card-actions">
+                  <button class="btn-icon-action" data-copy="+917536054568" aria-label="Copy phone number"
+                    title="Copy phone number">
+                    <span class="tooltip">Copy</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </button>
+                  <a href="tel:+917536054568" class="btn-icon-action" aria-label="Call phone number" data-cursor="Dial">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                      </path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Verified Online Registries in Left Column -->
+            <div class="verified-profiles-box" style="margin-top: 1.5rem;">
+              <div class="profiles-box-header">
+                Verified Online Registries
+              </div>
+              <div class="verified-links-list">
+                <a href="https://github.com/Dhananjaysharma824" target="_blank" rel="noopener noreferrer"
+                  class="verified-profile-link" data-cursor="GitHub">
+                  <div class="profile-link-left">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                      </path>
+                    </svg>
+                    <div>
+                      <div class="profile-name">GitHub</div>
+                      <div class="profile-handle">@Dhananjaysharma824</div>
+                    </div>
+                  </div>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com/in/dhananjay-sharma-629771288" target="_blank" rel="noopener noreferrer"
+                  class="verified-profile-link" data-cursor="LinkedIn">
+                  <div class="profile-link-left">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <div>
+                      <div class="profile-name">LinkedIn</div>
+                      <div class="profile-handle">dhananjay-sharma-629771288</div>
+                    </div>
+                  </div>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+              <div
+                style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px dashed var(--border-light); font-size: 0.82rem; color: var(--ink-secondary); line-height: 1.5;">
+                <strong style="color: var(--ink-primary); font-family: var(--font-display);">Location &amp; Academic
+                  Base</strong><br>
+                Based in Agra, Uttar Pradesh, India. Enrolled in B.Tech IT program at Hindustan College of Science &amp;
+                Technology, Mathura (affiliated to Dr. A.P.J. Abdul Kalam Technical University).
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Right: Direct Message Box Form -->
+          <div data-reveal="scale" data-delay="150">
+            <div class="contact-form-card" data-cursor-tilt>
+              <div class="form-header-bar">
+                <span class="form-header-title">Transmission Console // Direct Message</span>
+                <span class="form-header-status">Online &amp; Active</span>
+              </div>
+
+              <!-- Quick Autofill Prompts -->
+              <div class="form-quick-prompts">
+                <span
+                  style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); align-self: center; margin-right: 0.25rem;">PROMPTS:</span>
+                <button type="button" class="quick-prompt-btn" data-prompt="mern">⚡ MERN Stack Role</button>
+                <button type="button" class="quick-prompt-btn" data-prompt="frontend">⚡ Frontend / UI Role</button>
+                <button type="button" class="quick-prompt-btn" data-prompt="project">⚡ Project Collab</button>
+              </div>
+
+              <form id="contact-message-form" class="contact-message-form" action="https://formsubmit.co/dhananjay42819@gmail.com" method="POST">
+                <!-- FormSubmit Configuration for Direct Email Delivery -->
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_subject" id="form-subject-hidden" value="New Portfolio Message for Dhananjay Sharma" />
+                <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Dhananjay Sharma! I have received your message and will review it and reply as soon as possible." />
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="contact-name" class="form-label">Your Name *</label>
+                    <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g. Rahul Verma"
+                      required autocomplete="name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="contact-email" class="form-label">Your Email *</label>
+                    <input type="email" id="contact-email" name="email" class="form-control"
+                      placeholder="name@company.com" required autocomplete="email" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject" class="form-label">Opportunity / Inquiry Type</label>
+                  <select id="contact-subject" name="subject" class="form-control form-select">
+                    <option value="Full Stack MERN Role">Full Stack MERN Developer Opportunity</option>
+                    <option value="Frontend Development Role">Frontend Development Opportunity</option>
+                    <option value="Web Designing Role">Web Designing / UI Engineering</option>
+                    <option value="Software Engineer Position">Software Engineer (General)</option>
+                    <option value="Freelance or Consulting">Project Collaboration / Consulting</option>
+                    <option value="General Technical Dialogue">General Technical Dialogue</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Message Details *</label>
+                  <textarea id="contact-message" name="message" class="form-control form-textarea" rows="4"
+                    placeholder="Detail the role, project, or topic you'd like to discuss with Dhananjay..."
+                    required></textarea>
+                </div>
+
+                <button type="submit" id="btn-submit-message" class="btn-primary btn-submit-message"
+                  data-cursor="Dispatch">
+                  <span>Transmit Message to Dhananjay</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+
+                <div id="form-status-alert" class="form-status-alert" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+
+            <!-- Tactile Kinetic Sandbox Module (Fills the space below message form) -->
+            <div class="tactile-sandbox-module" data-cursor-tilt>
+              <div class="sandbox-module-header">
+                <div class="sandbox-header-left">
+                  <span class="sandbox-title-mono">TACTILE KINETIC LAB // SYSTEM DOCK</span>
+                </div>
+                <div class="sandbox-header-actions">
+                  <button type="button" class="sandbox-mini-btn" id="btn-dock-drop" title="Drop a block into the dock">
+                    <span>+ DROP BLOCK</span>
+                  </button>
+                  <button type="button" class="sandbox-mini-btn" id="btn-dock-tumble" title="Tumble all blocks">
+                    <span>TUMBLE</span>
+                  </button>
+                  <button type="button" class="sandbox-mini-btn" id="btn-dock-reset" title="Reset blocks to initial positions">
+                    <span>RESET</span>
+                  </button>
+                  <div class="sandbox-status-chip">
+                    <span class="pulse-green"></span>
+                    <span>LIVE</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Physics Canvas Stage -->
+              <div class="sandbox-canvas-stage">
+                <canvas id="tactile-physics-canvas" width="560" height="260" aria-label="Interactive physics block sandbox"></canvas>
+                <div class="shelf-indicator-badge">
+                  <span>DOCK SHELF ➔</span>
+                </div>
+              </div>
+
+              <div class="sandbox-module-footer">
+                <span class="sandbox-hint-mono">
+                  // CURSOR: DRAG TO REPOSITION • FLING WITH MOMENTUM • STACK ON RIGHT SHELF • DBL-CLICK TO DROP
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-wide footer-inner">
+      <div class="footer-brand">
+        <span class="footer-name">Dhananjay Sharma</span>
+        <span class="footer-copy">© 2026 Dhananjay Sharma. Grounded in resume source documentation.</span>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#hero">Top</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Education</a>
+      </nav>
+
+      <button id="btn-scroll-top" class="btn-scroll-top" aria-label="Scroll back to top">
+        <span>Back to Top</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="12" y1="19" x2="12" y2="5"></line>
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
